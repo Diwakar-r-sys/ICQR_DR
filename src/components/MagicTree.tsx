@@ -33,17 +33,20 @@ export function MagicTree({ state, config, activeTheme, season, isManualQR, onTo
   let treeFilter = activeTheme.filter;
   let petalColor = activeTheme.petalColor;
   let petalOpacity = 0.8;
+  let qrColor = '#db2777'; // Dark pink for better scannability
 
   if (season === 'summer') {
     treeImage = SEASON_IMAGES.summer;
     treeFilter = SEASON_FILTERS.summer;
     petalColor = '#86efac';
     petalOpacity = 0.5;
+    qrColor = '#15803d'; // Green
   } else if (season === 'autumn') {
     treeImage = SEASON_IMAGES.autumn;
     treeFilter = SEASON_FILTERS.autumn;
     petalColor = '#F59E0B';
     petalOpacity = 0.85;
+    qrColor = '#b45309'; // Yellow/amber
   }
 
   return (
@@ -104,7 +107,7 @@ export function MagicTree({ state, config, activeTheme, season, isManualQR, onTo
                 <QRCodeSVG 
                   value={config.qrValue || 'https://icqr.com'} 
                   size={200} 
-                  fgColor={activeTheme.petalColor} 
+                  fgColor={qrColor} 
                   bgColor="transparent" 
                   level="H" 
                 />

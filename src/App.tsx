@@ -32,7 +32,7 @@ export default function App() {
   const [detection, setDetection] = useState<DetectionResult | null>(null);
   
   // UI State
-  const [url, setUrl] = useState("https://icqr.com/");
+  const [url, setUrl] = useState("https://instagram.com/diwakar_r.1");
   const [season, setSeason] = useState<'spring' | 'summer' | 'autumn'>('spring');
   const [isMuted, setIsMuted] = useState(true);
   const [activeColor, setActiveColor] = useState(THEME_COLORS[0].main);
